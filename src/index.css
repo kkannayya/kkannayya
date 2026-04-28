@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-blue: #3B82F6;
+  --color-brand-bg: #F0F7FF;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-slate-800;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .perspective-\[1000px\] {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@layer components {
+  .vibrant-button-blue {
+    @apply bg-blue-500 text-white rounded-2xl shadow-[0_4px_0_0_#2563EB] font-black transition-all active:translate-y-1 active:shadow-none;
+  }
+  
+  .vibrant-button-green {
+    @apply bg-green-500 text-white rounded-2xl shadow-[0_4px_0_0_#059669] font-black transition-all active:translate-y-1 active:shadow-none;
+  }
+  
+  .vibrant-card {
+    @apply bg-white border-4 border-slate-200 rounded-[2.5rem] shadow-[0_6px_0_0_#E2E8F0];
+  }
+}
